@@ -7,7 +7,8 @@ def call(Map config){
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
 
         // Run Maven on a Unix agent.
-        sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore=true clean package'
+        sh 'mvn -version'
+        sh 'mvn -Dmaven.test.failure.ignore=true clean package'
 
         // Grouping steps
         // sh '...'
